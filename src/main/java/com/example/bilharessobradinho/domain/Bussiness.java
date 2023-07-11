@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+
 public class Bussiness implements Serializable {
     private String name;
     private String CNPJ;
