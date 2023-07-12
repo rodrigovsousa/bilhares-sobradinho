@@ -6,10 +6,10 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-
 public class Business implements Serializable {
     private String name;
-    private String CNPJ;
+
+    private String cnpj;
     private String endereco;
 
     public String getName() {
@@ -21,11 +21,11 @@ public class Business implements Serializable {
     }
 
     public String getCNPJ() {
-        return CNPJ;
+        return cnpj;
     }
 
     public void setCNPJ(String CNPJ) {
-        this.CNPJ = CNPJ;
+        this.cnpj = cnpj;
     }
 
     public String getEndereco() {
@@ -39,14 +39,13 @@ public class Business implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Bussiness bussiness = (Bussiness) o;
-        return Objects.equals(name, bussiness.name) && Objects.equals(CNPJ, bussiness.CNPJ)
+        if (o == null || getClass() != o.getClass()) return false; Business bussiness = (Business) o;
+        return Objects.equals(name, bussiness.name) && Objects.equals(cnpj, bussiness.cnpj)
                 && Objects.equals(endereco, bussiness.endereco);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, CNPJ, endereco);
+        return Objects.hash(name, cnpj, endereco);
     }
 }
