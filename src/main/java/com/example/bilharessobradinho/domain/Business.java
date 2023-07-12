@@ -7,7 +7,7 @@ import java.util.Objects;
 
 @Entity
 
-public class Bussiness implements Serializable {
+public class Business implements Serializable {
     private String name;
     private String CNPJ;
     private String endereco;
@@ -41,7 +41,8 @@ public class Bussiness implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bussiness bussiness = (Bussiness) o;
-        return Objects.equals(name, bussiness.name) && Objects.equals(CNPJ, bussiness.CNPJ) && Objects.equals(endereco, bussiness.endereco);
+        return Objects.equals(name, bussiness.name) && Objects.equals(CNPJ, bussiness.CNPJ)
+                && Objects.equals(endereco, bussiness.endereco);
     }
 
     @Override
